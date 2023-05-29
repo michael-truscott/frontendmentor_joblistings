@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import BackgroundDesktop from './images/bg-header-desktop.svg';
+import BackgroundMobile from './images/bg-header-mobile.svg';
+import data from './data.json';
+import JobListings from './JobListings';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeaderBackground />
+      <div className="App__container">
+        <JobListings jobs={data} />
+      </div>
     </div>
+  );
+}
+
+function HeaderBackground() {
+  return (
+    <picture>
+      <source media="(max-width: 600px)" srcSet={BackgroundMobile} />
+      <source media="(min-width: 601px)" srcSet={BackgroundDesktop} />
+      <img src={BackgroundDesktop} alt="" className="App__background-image"/>
+    </picture>
   );
 }
 
