@@ -24,7 +24,7 @@ function JobSummary({job}) {
       <div className="JobSummary__company-and-highlights">
         <p className="JobSummary__company">{job.company}</p>
         {job.new && <div className="new">New!</div>}
-        {job.new && <div className="featured">Featured</div>}
+        {job.featured && <div className="featured">Featured</div>}
       </div>
       <p className="JobSummary__position">{job.position}</p>
       <p className="JobSummary__details">{job.postedAt} <span className="interpunct">·</span> {job.contract} <span className="interpunct">·</span> {job.location}</p>
