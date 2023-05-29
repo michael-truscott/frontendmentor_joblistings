@@ -9,7 +9,7 @@ export default function JobListing({job}) {
     <div className="JobListing__border-container">
       <div className={classes}>
         <div className="JobListing__image-and-summary">
-          <img src={process.env.PUBLIC_URL + job.logo} alt="" />
+          <img className="JobListing__image" src={process.env.PUBLIC_URL + job.logo} alt="" />
           <JobSummary job={job}/>
         </div>
         <JobTags tags={tags} />
@@ -21,10 +21,11 @@ export default function JobListing({job}) {
 function JobSummary({job}) {
   return (
     <div className="JobSummary__container">
-      <p className="JobSummary__company">{job.company}</p>
-      {
-      // TODO: new/featured tags
-      }
+      <div className="JobSummary__company-and-highlights">
+        <p className="JobSummary__company">{job.company}</p>
+        {job.new && <div className="new">New!</div>}
+        {job.new && <div className="featured">Featured</div>}
+      </div>
       <p className="JobSummary__position">{job.position}</p>
       <p className="JobSummary__details">{job.postedAt} <span className="interpunct">·</span> {job.contract} <span className="interpunct">·</span> {job.location}</p>
     </div>
@@ -38,7 +39,6 @@ function JobTags({tags}) {
         tags.map((tag, index) => {
           return (
             <JobTag key={index} tag={tag} />
-            // <p key={index}>{tag}</p>
           );
         })
       }
