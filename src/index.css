@@ -69,7 +69,7 @@ span.interpunct {
 
 .JobSummary__container {
   margin-left: 24px;
-  padding: 4px 0;
+  padding: 8px 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -80,7 +80,6 @@ span.interpunct {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
 }
 
 .JobSummary__company {
