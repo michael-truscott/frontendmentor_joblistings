@@ -48,7 +48,7 @@ span.interpunct {
 }
 
 .JobListing__border-container {
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 2px 2px 8px rgb(0,0,0,0.2);
   overflow: hidden;
 }
