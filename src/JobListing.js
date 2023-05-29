@@ -1,15 +1,19 @@
 export default function JobListing({job}) {
   const tags = [job.role, job.level, ...job.languages, ...job.tools];
+  let classes = "JobListing__container";
+  if (job.featured) {
+    classes += " featured";
+  }
+  
   return (
-    <div className="JobListing__container">
-      {
-        // TODO: highlight left corner if featured
-      }
-      <div className="JobListing__image-and-summary">
-        <img src={process.env.PUBLIC_URL + job.logo} alt="" />
-        <JobSummary job={job}/>
+    <div className="JobListing__border-container">
+      <div className={classes}>
+        <div className="JobListing__image-and-summary">
+          <img src={process.env.PUBLIC_URL + job.logo} alt="" />
+          <JobSummary job={job}/>
+        </div>
+        <JobTags tags={tags} />
       </div>
-      <JobTags tags={tags} />
     </div>
   );
 }
