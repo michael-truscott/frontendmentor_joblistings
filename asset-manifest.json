@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/frontendmentor_joblistings/static/css/main.50f411ff.css",
-    "main.js": "/frontendmentor_joblistings/static/js/main.877451b8.js",
+    "main.js": "/frontendmentor_joblistings/static/js/main.77787402.js",
     "static/js/787.9fbcd90a.chunk.js": "/frontendmentor_joblistings/static/js/787.9fbcd90a.chunk.js",
     "static/media/bg-header-desktop.svg": "/frontendmentor_joblistings/static/media/bg-header-desktop.752d0faf14c00c6fb55f968b61e827e0.svg",
     "static/media/bg-header-mobile.svg": "/frontendmentor_joblistings/static/media/bg-header-mobile.b7750a0c3e0c016763b9a1fbcf1c340d.svg",
     "index.html": "/frontendmentor_joblistings/index.html",
     "static/media/icon-remove.svg": "/frontendmentor_joblistings/static/media/icon-remove.70c075ce001e5ccae7c68a570c4b7bc0.svg",
     "main.50f411ff.css.map": "/frontendmentor_joblistings/static/css/main.50f411ff.css.map",
-    "main.877451b8.js.map": "/frontendmentor_joblistings/static/js/main.877451b8.js.map",
+    "main.77787402.js.map": "/frontendmentor_joblistings/static/js/main.77787402.js.map",
     "787.9fbcd90a.chunk.js.map": "/frontendmentor_joblistings/static/js/787.9fbcd90a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.50f411ff.css",
-    "static/js/main.877451b8.js"
+    "static/js/main.77787402.js"
   ]
 }
