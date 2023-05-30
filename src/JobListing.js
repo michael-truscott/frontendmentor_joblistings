@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 export default function JobListing({job}) {
   const tags = [job.role, job.level, ...job.languages, ...job.tools];
   let classes = "JobListing__container";
@@ -26,7 +28,7 @@ function JobSummary({job}) {
         {job.new && <div className="new">New!</div>}
         {job.featured && <div className="featured">Featured</div>}
       </div>
-      <p className="JobSummary__position">{job.position}</p>
+      <a href="#" className="JobSummary__position">{job.position}</a>
       <p className="JobSummary__details">{job.postedAt} <span className="interpunct">·</span> {job.contract} <span className="interpunct">·</span> {job.location}</p>
     </div>
   );

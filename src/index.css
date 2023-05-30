@@ -122,6 +122,11 @@ span.interpunct {
   color: var(--very-dark-grey-cyan);
   font-size: 18px;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.JobSummary__position:hover {
+  color: var(--dark-cyan);
 }
 
 .JobSummary__details {
@@ -139,4 +144,12 @@ span.interpunct {
   padding: 8px;
   color: var(--dark-cyan);
   font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.JobTag__container:hover {
+  background: var(--dark-cyan);
+  color: white;
 }
