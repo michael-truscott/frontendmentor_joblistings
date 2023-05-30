@@ -6,7 +6,7 @@ import FilterBar from './FilterBar';
 import React, { useState } from 'react';
 
 function App() {
-  const [tags, setTags] = useState(["Frontend", "CSS", "JavaScript"]);
+  const [tags, setTags] = useState([]);
   const onClear = () => { setTags([]) };
   const onRemoveTag = (toRemove) => {
     setTags((oldTags) => oldTags.filter((t) => t !== toRemove));
