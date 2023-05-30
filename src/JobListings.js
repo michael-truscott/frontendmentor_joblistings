@@ -1,12 +1,12 @@
 import JobListing from "./JobListing";
 
-export default function JobListings(props) {
+export default function JobListings({jobs, onAddTag}) {
   return (
     <div className="JobListings__container">
       {
-        props.jobs.map((job) => {
+        jobs.map((job) => {
           return (
-            <JobListing key={job.id} job={job} />
+            <JobListing key={job.id} job={job} onAddTag={onAddTag}/>
           );
         })
       }

@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-export default function JobListing({job}) {
+export default function JobListing({job, onAddTag}) {
   const tags = [job.role, job.level, ...job.languages, ...job.tools];
   let classes = "JobListing__container";
   if (job.featured) {
@@ -14,7 +14,7 @@ export default function JobListing({job}) {
           <img className="JobListing__image" src={process.env.PUBLIC_URL + job.logo} alt="" />
           <JobSummary job={job}/>
         </div>
-        <JobTags tags={tags} />
+        <JobTags tags={tags} onAddTag={onAddTag} />
       </div>
     </div>
   );
@@ -34,13 +34,13 @@ function JobSummary({job}) {
   );
 }
 
-function JobTags({tags}) {
+function JobTags({tags, onAddTag}) {
   return (
     <div className="JobTags__container">
       {
         tags.map((tag, index) => {
           return (
-            <JobTag key={index} tag={tag} />
+            <JobTag key={index} tag={tag} onClick={() => onAddTag(tag)}/>
           );
         })
       }
@@ -48,9 +48,9 @@ function JobTags({tags}) {
   );
 }
 
-function JobTag({tag}) {
+function JobTag({tag, onClick}) {
   return (
-    <div className="JobTag__container">
+    <div className="JobTag__container" onClick={onClick}>
       <p>{tag}</p>
     </div>
   );
