@@ -21,12 +21,19 @@ function App() {
     });
   };
 
+  const jobs = tags.length === 0 ? data :
+    data.filter((job) => {
+      const jobTags = [job.role, job.level, ...job.languages, ...job.tools];
+      // Job must match every selected tag
+      return tags.every((tag) => jobTags.includes(tag));
+    });
+
   return (
     <div className="App">
       <HeaderBackground />
       <div className="App__container">
         <FilterBar tags={tags} onClear={onClear} onRemoveTag={onRemoveTag} />
-        <JobListings jobs={data} onAddTag={onAddTag} />
+        <JobListings jobs={jobs} onAddTag={onAddTag} />
       </div>
     </div>
   );
