@@ -32,7 +32,9 @@ function App() {
     <div className="App">
       <HeaderBackground />
       <div className="App__container">
-        <FilterBar tags={tags} onClear={onClear} onRemoveTag={onRemoveTag} />
+        {
+          tags.length > 0 && <FilterBar tags={tags} onClear={onClear} onRemoveTag={onRemoveTag} />
+        }
         <JobListings jobs={jobs} onAddTag={onAddTag} />
       </div>
     </div>
