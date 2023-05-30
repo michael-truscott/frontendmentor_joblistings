@@ -70,6 +70,10 @@ span.interpunct {
   padding-left: calc(40px - 5px); /* kinda hacky way to undo the border, do this a better way? */
 }
 
+.JobListing__container hr {
+  display: none;
+}
+
 .JobSummary__container {
   margin-left: 24px;
   padding: 8px 0;
@@ -222,4 +226,50 @@ span.interpunct {
 
 .FilterBarTag__btn-remove-container:hover {
   background: var(--very-dark-grey-cyan);
+}
+
+@media screen and (max-width: 600px) {
+  .JobListings__container {
+    gap: 40px;
+  }
+
+  .JobListing__image {
+    position: absolute;
+    width: 48px;
+    top: -24px;
+    align-self: flex-start;
+  }
+
+  .JobListing__relative-container {
+    position: relative;
+  }
+
+  .JobListing__container {
+    padding: 30px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .JobListing__container.featured {
+    padding-left: calc(24px - 5px);
+  }
+
+  .JobListing__container hr {
+    display: inherit;
+    align-self: stretch;
+    height: 1px;
+    background: var(--dark-grey-cyan);
+    border: none;
+  }
+
+  .JobListing__image-and-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .JobSummary__container {
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+  }
 }

@@ -8,13 +8,16 @@ export default function JobListing({job, onAddTag}) {
   }
   
   return (
-    <div className="JobListing__border-container">
-      <div className={classes}>
-        <div className="JobListing__image-and-summary">
-          <img className="JobListing__image" src={process.env.PUBLIC_URL + job.logo} alt="" />
-          <JobSummary job={job}/>
+    <div className="JobListing__relative-container">
+      <div className="JobListing__border-container">
+        <div className={classes}>
+          <div className="JobListing__image-and-summary">
+            <img className="JobListing__image" src={process.env.PUBLIC_URL + job.logo} alt="" />
+            <JobSummary job={job}/>
+          </div>
+          <hr />
+          <JobTags tags={tags} onAddTag={onAddTag} />
         </div>
-        <JobTags tags={tags} onAddTag={onAddTag} />
       </div>
     </div>
   );
